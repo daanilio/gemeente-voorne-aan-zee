@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>@yield('title')</title>
+
     <!-- Voeg Tailwind CSS toe -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
@@ -35,8 +37,6 @@
                 <li><a href="#" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Klacht indienen</a></li>
             </ul>
         </nav>
-
-
         <div class="flex justify-center text-center md:block">
             <ul class="flex flex-row md:flex-row md:space-x-8 md:text-lg">
                 <li><a href="{{ route('medewerker') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Medewerker</a></li>
@@ -47,7 +47,6 @@
     </div>
 </header>
 
-
 <main class="bg-gray-100 p-10 md:p-20 lg:p-20">
     @yield('content')
 </main>
@@ -57,7 +56,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center">
         <p class="mb-2 md:mb-0"><strong>Gemeente Voorne aan Zee</strong> klachten-applicatie</p>
         <div class="flex items-center space-x-4 md:ml-4">
-            <p class="text-sm md:text-base mb-2 md:mb-0">Liever bellen? 06-12345678.</p>
+            <p class="text-l md:text-base mb-2 md:mb-0">Liever bellen? 06-12345678.</p>
             <img src="{{ URL('img/logo_vaz.png') }}" alt="Foto van Voorne aan Zee" class="h-8 md:h-12 max-w-full">
         </div>
     </div>
