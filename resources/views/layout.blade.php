@@ -14,7 +14,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex flex-col h-screen justify-between">
 
 <!-- Header -->
 <header class="py-3 border-b-2 border-gray bg-white px-4 md:px-20">
@@ -43,15 +43,15 @@
         </div>
     </div>
 </header>
-
-@yield('content')
-
+<main class="p-4 md:p-20">
+    @yield('content')
+</main>
 <!-- Footer -->
 <footer class="px-4 md:px-20 bg-white py-2 bottom-0 relative border-t-2 text-gray-500">
     <div class="flex flex-col md:flex-row justify-between items-center">
         <p class="mb-2 md:mb-0"><strong>Gemeente Voorne aan Zee</strong> klachten-applicatie</p>
         <div class="flex items-center space-x-4 md:ml-4">
-            <p class="text-sm md:text-base mb-2 md:mb-0">Liever bellen? 06-12345678.</p>
+            <p class="text-sm md:text-base mb-2 md:mb-0">Liever bellen? <a href="tel:06-12345678">06-12345678</a>.</p>
             <img src="{{ URL('img/logo_vaz.png') }}" alt="Foto van Voorne aan Zee" class="h-8 md:h-12 max-w-full">
         </div>
     </div>
