@@ -67,11 +67,7 @@
                             class="flex items-center justify-between border rounded py-2 px-3 bg-white shadow-sm">
                             <input
                                 class="appearance-none outline-none w-full text-gray-700 mr-3 py-1"
-                                id="foto" name="foto" type="file" accept="image/*">
-                            {{--                            <button class="bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline">--}}
-                            {{--                                Uploaden--}}
-                            {{--                            </button>--}}
-                        </div>
+                                id="foto" name="foto" type="file" accept="image/*"></div>
                     </div>
                     <div class="mb-6 hidden">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="datum">
