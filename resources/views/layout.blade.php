@@ -4,17 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title')</title>
 
     <!-- Voeg Tailwind CSS toe -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+    <!-- OPS script -->
+    <script src="@yield('osm-link')" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
+
+    <!-- Styling -->
+    <style>
+        @yield('styling')
+    </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 flex justify-between flex-col h-screen">
 
 <!-- Header -->
 <header class="py-3 border-b-2 border-gray bg-white px-4 md:px-20">
