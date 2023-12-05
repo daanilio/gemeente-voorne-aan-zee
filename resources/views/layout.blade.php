@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- OPS script -->
-    <script src="@yield('osm-link')" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="@yield('osm-link')" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -27,31 +28,27 @@
 <header class="py-3 border-b-2 border-gray bg-white px-4 md:px-20">
     <div class="md:flex md:justify-between md:items-center text-black">
         <img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}">
-        <nav class="lg:flex md:pt-0 pt-2 flex-grow md:justify-center md:items-center">
-            <ul class="flex space-x-8 justify-center md:justify-start">
-                <li><a href="{{ route('welcome') }}"
-                       class="text-lg md:text-xl p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Hoofdpagina</a>
-                </li>
-                <li><a href="#"
-                       class="text-lg md:text-xl p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Klacht
-                        indienen</a></li>
-                <li class="md:hidden">
-                    <a href="#"
-                       class="text-lg md:text-xl p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a>
-                </li>
+
+        <nav class="lg:flex md:pt-0 pt-2 md:flex-grow md:justify-center md:items-center md:pb-0 pb-3">
+            <ul class="flex flex-row md:flex-row justify-center md:space-x-8 md:text-lg">
+                <li><a href="{{ route('welcome') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Hoofdpagina</a></li>
+                <li><a href="#" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Klacht indienen</a></li>
             </ul>
         </nav>
-        <div class="text-center hidden md:block">
-            <ul>
-                <li><a href="#"
-                       class="text-lg md:text-xl p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a>
-                </li>
+
+
+        <div class="flex justify-center text-center md:block">
+            <ul class="flex flex-row md:flex-row md:space-x-8 md:text-lg">
+                <li><a href="{{ route('medewerker') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Medewerker</a></li>
+                <li><a href="#" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a></li>
             </ul>
         </div>
+
     </div>
 </header>
 
-<main class="bg-gray-100 p-20">
+
+<main class="bg-gray-100 p-10 md:p-20 lg:p-20">
     @yield('content')
 </main>
 
