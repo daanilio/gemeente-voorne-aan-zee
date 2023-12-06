@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Klacht;
 
+use Illuminate\Support\Facades\Log;
+
 class KlachtController extends Controller
 {
     public function create()
@@ -28,16 +30,16 @@ class KlachtController extends Controller
         if ($request->hasFile('foto')) {
             $image = $request->file('foto');
             $imageName = time() . '.' . $image->getClientOriginalName();
+//            dd($request->file('foto'));
 
-            // Verplaats de foto naar de juiste map
-//            $image->move(public_path('images'), $imageName);
-            $image->storeAs('images', $imageName, 'public');
+            // Probeer de afbeelding op te slaan
+            $image->storeAs('images/', $imageName, 'public');
+
             // Voeg de bestandsnaam van de foto toe aan de $data-array
             $data['foto'] = $imageName;
-
-//        dd($request->all());
             // Handmatig de klacht aanmaken en opslaan
             Klacht::create($data);
+
         }
 
 //         Redirect naar de welkomstpagina met een succesmelding
