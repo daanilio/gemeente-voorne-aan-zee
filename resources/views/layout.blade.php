@@ -54,7 +54,7 @@
 <!-- Footer -->
 <footer class="px-4 md:px-20 bg-white py-2 bottom-0 relative border-t-2 text-gray-500">
     <div class="flex flex-col md:flex-row justify-between items-center">
-        <p class="mb-2 md:mb-0"><strong>Gemeente Voorne aan Zee</strong> klachten-applicatie</p>
+        <p class="mb-2 md:mb-0 text-center"><strong>Gemeente Voorne aan Zee</strong> <br class="md:hidden">klachten-applicatie</p>
         <div class="flex items-center space-x-4 md:ml-4">
             <p class="text-l md:text-base mb-2 md:mb-0">Liever bellen? 06-12345678.</p>
             <img src="{{ URL('img/logo_vaz.png') }}" alt="Foto van Voorne aan Zee" class="h-8 md:h-12 max-w-full">

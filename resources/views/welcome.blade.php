@@ -54,7 +54,7 @@
                             id="klacht" name="klacht" placeholder="Omschrijf uw klacht"></textarea>
                     </div>
                     <div class="mb-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="foto">
+                        <label class="block text-gray-700 text-l font-bold mb-2" for="foto">
                             Foto toevoegen:
                         </label>
                         <div
