@@ -19,9 +19,11 @@ class KlachtController extends Controller
             'naam' => 'required',
             'email' => 'required|email',
             'klacht' => 'required',
-            'locatie' => 'required',
+            'lat' => 'required',
+            'long' => 'required',
             'foto' => 'required|image',
         ]);
+
 //        // Verwerk de foto
         if ($request->hasFile('foto')) {
             $image = $request->file('foto');

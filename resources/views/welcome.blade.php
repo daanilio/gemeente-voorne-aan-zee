@@ -53,6 +53,16 @@
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-24"
                             id="klacht" name="klacht" placeholder="Omschrijf uw klacht"></textarea>
                     </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="foto">
+                            Foto toevoegen:
+                        </label>
+                        <div
+                            class="flex items-center justify-between border rounded py-2 px-3 bg-white shadow-sm">
+                            <input
+                                class="appearance-none outline-none w-full text-gray-700 mr-3 py-1"
+                                id="foto" name="foto" type="file" accept="image/*"></div>
+                    </div>
                     <div class="mb-6 hidden">
                         <label class="block text-gray-700 text-sm font-bold mb-2" for="lat">
                             Latitude:
@@ -72,6 +82,7 @@
 
                     <p class="text-red-500 hidden text-center pb-2" id="errorText">Je locatie is verplicht om een klacht in te
                         dienen.</p>
+
                     <div class="flex items-center justify-center">
                         <button id="submitBtn"
                                 class="md:w-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

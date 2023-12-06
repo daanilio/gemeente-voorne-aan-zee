@@ -15,7 +15,8 @@ class Klacht extends Model
         'naam',
         'email',
         'klacht',
-        'locatie',
+        'lat',
+        'long',
         'foto',
     ];
 }

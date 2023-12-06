@@ -12,7 +12,7 @@
             <div class="text-xl font-bold mb-2">Uw informatie:</div>
             <p><span class="font-bold">Naam:</span> {{ $data['naam'] }}</p>
             <p><span class="font-bold">Email:</span> {{ $data['email'] }}</p>
-            <p><span class="font-bold">Locatie:</span> {{ $data['locatie'] }}</p>
+{{--            <p><span class="font-bold">Locatie:</span> {{ $data['locatie'] }}</p>--}}
         </div>
         <div class="bg-white shadow-lg p-4 row-start-3">
             <div class="text-xl font-bold mb-2">Ingediende klacht:</div>
