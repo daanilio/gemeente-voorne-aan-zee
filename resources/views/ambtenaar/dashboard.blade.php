@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('title', 'Dashboard')
-{{--@section('osm-link', 'https://unpkg.com/leaflet@1.7.1/dist/leaflet.css')--}}
 @section('styling')
 #map {
             height: 500px;
@@ -13,6 +12,7 @@
 @section('content')
     <div id="map"></div>
 
+{{--    Laad open street map in --}}
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
@@ -23,6 +23,7 @@
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
+
 
             L.marker([51.8833, 4.1167]).addTo(map)
                 .bindPopup('Hello, Voorne aan Zee!')

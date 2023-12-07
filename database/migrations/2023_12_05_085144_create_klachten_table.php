@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('lat');
             $table->string('long');
             $table->string('foto')->nullable();
+            $table->string('opgelost')->default('nee');
             $table->timestamps();
         });
 
