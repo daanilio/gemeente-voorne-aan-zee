@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KlachtController;
 
 Route::get('/', function () {
-    return view('index');
-});
+    return view('welcome');
+})->name('welcome');
 
-Route::get('/', [KlachtController::class, 'create'])->name('index');
+Route::get('/dashboard', function () {
+    return view('ambtenaar/dashboard');
+})->name('medewerker');
+
+Route::get('/indienen', [KlachtController::class, 'create'])->name('klacht.create');
 Route::post('/klacht', [KlachtController::class, 'store'])->name('klacht.store');
