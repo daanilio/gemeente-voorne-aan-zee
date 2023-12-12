@@ -1,7 +1,7 @@
 @extends('layout')
 
 {{--Voeg titel toe--}}
-@section('title', 'VaZ klachten-applicatie')
+@section('title', 'Gemeente Voorne aan Zee')
 
 {{--Maakt gebruikt van layout.blade--}}
 @section('content')
