@@ -16,10 +16,8 @@ return new class extends Migration
             $table->string('naam');
             $table->string('email');
             $table->text('klacht');
-            $table->string('lat');
-            $table->string('long');
+            $table->string('locatie');
             $table->string('foto')->nullable();
-            $table->string('opgelost')->default('nee');
             $table->timestamps();
         });
 
