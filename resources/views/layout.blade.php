@@ -30,7 +30,7 @@
 <!-- Header -->
 <header class="py-3 border-b-2 border-gray bg-white px-4 md:px-20">
     <div class="md:flex md:justify-between md:items-center text-black">
-        <img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}">
+        <a href="{{ route('index') }}"><img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}"></a>
 
         <nav class="lg:flex md:pt-0 pt-2 md:flex-grow md:justify-center md:items-center md:pb-0 pb-3">
             <ul class="flex flex-row md:flex-row justify-center md:space-x-8 md:text-lg">
