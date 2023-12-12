@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>@yield('title')</title>
+    <link rel="icon" type="image/x-icon" href="{{ URL('img/logo_vaz.png') }}">
 
     <!-- Voeg Tailwind CSS toe -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -29,7 +30,7 @@
 <!-- Header -->
 <header class="py-3 border-b-2 border-gray bg-white px-4 md:px-20">
     <div class="md:flex md:justify-between md:items-center text-black">
-        <img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}">
+        <a href="{{ route('index') }}"><img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}"></a>
 
         <nav class="lg:flex md:pt-0 pt-2 md:flex-grow md:justify-center md:items-center md:pb-0 pb-3">
             <ul class="flex flex-row md:flex-row justify-center md:space-x-8 md:text-lg">
@@ -39,10 +40,32 @@
         </nav>
         <div class="flex justify-center text-center md:block">
             <ul class="flex flex-row md:flex-row md:space-x-8 md:text-lg">
-                <li><a href="{{ route('medewerker') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Medewerker</a></li>
-                <li><a href="#" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a></li>
+                @can('medewerker')
+                    <li class="flex items-center">
+                        <a href="{{ route('medewerkers') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Medewerker</a>
+                    </li>
+                @endcan
+                @guest
+                    <li class="flex items-center">
+                        <a href="{{ route('login') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a>
+                    </li>
+                @endguest
+                @guest
+                    <li class="flex items-center">
+                        <a href="{{ route('registreer') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Registreren</a>
+                    </li>
+                @endguest
+                @auth
+                    <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <li class="flex items-center">
+                            <button type="submit" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Uitloggen</button>
+                        </li>
+                    </form>
+                @endauth
             </ul>
         </div>
+
 
     </div>
 </header>
