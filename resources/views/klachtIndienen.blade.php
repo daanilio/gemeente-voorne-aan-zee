@@ -8,7 +8,7 @@
     <section class="grid grid-cols-1">
 
         <!-- Formulier -->
-        <div class="w-1/2 md:w-1/2 mx-auto">
+        <div class="w-full md:w-1/2 mx-auto">
             <h2 class="text-3xl text-center font-bold pb-4">Klacht indienen</h2>
             <div class="bg-white shadow-lg p-4" id="formSection">
                 <form method="post" action="{{ route('klacht.store') }}" enctype="multipart/form-data">
