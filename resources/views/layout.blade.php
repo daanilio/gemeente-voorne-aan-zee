@@ -22,7 +22,7 @@
         <img class="mx-auto p-2 w-48 md:w-52 px-2 md:px-4" alt="Logo van VaZ" src="{{ URL('img/logo_vaz_text.png') }}">
         <nav class="lg:flex md:pt-0 pt-2 flex-grow md:justify-center md:items-center">
             <ul class="flex space-x-8 justify-center md:justify-start">
-                <li><a href="{{ route('welcome') }}"
+                <li><a href="{{ route('index') }}"
                        class="text-lg md:text-xl p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Hoofdpagina</a>
                 </li>
                 <li><a href="#"
