@@ -7,8 +7,8 @@
 @section('content')
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="flex flex-col space-y-8">
-            <div class="bg-white shadow-lg p-4">
-                <p class="text-2xl md:text-3xl font-bold">Gemeente Voorne aan Zee klachten applicatie</p>
+            <div class="bg-white shadow-lg p-8">
+                <p class="text-2xl md:text-3xl font-bold pb-4">Gemeente Voorne aan Zee klachten applicatie</p>
                 <br>
                 <p class="text-base md:text-m">
                     Beste burger, welkom bij de klachtenapplicatie van Gemeente Voorne aan Zee.<br><br>
