@@ -50,6 +50,11 @@
                         <a href="{{ route('login') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a>
                     </li>
                 @endguest
+                @guest
+                    <li class="flex items-center">
+                        <a href="{{ route('registreer') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Registreren</a>
+                    </li>
+                @endguest
                 @auth
                     <form id="logout-form" method="POST" action="{{ route('logout') }}">
                         @csrf
