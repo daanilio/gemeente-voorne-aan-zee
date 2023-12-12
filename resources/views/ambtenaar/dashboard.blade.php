@@ -45,16 +45,16 @@
                     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 }).addTo(map);
 
-                var customPopup = L.popup({maxWidth: 400, maxHeight: 400});
+                L.popup({maxWidth: 400, maxHeight: 400});
 
                 // De foreach zorgt ervoor dat elke klacht wordt weergegeven als een pin
                 @foreach($klachten as $klacht)
-                customPopup.setContent("<b>Klacht id: </b>{{ $klacht['id'] }}<br><b>Klacht: </b>{{ $klacht['klacht'] }}<br><b>Opgelost: </b>{{ $klacht['opgelost'] }}<br><b>Foto: <img src='{{ asset('storage/images/') . '/' . $klacht['foto'] }}' alt='Foto van klacht'><br></b>");
+                var popup = "<b>Klacht id: </b>{{ $klacht['id'] }}<br><b>Klacht: </b>{{ $klacht['klacht'] }}<br><b>Opgelost: </b>{{ $klacht['opgelost'] }}<br><b>Foto: <img src='{{ asset('storage/images/') . '/' . $klacht['foto'] }}' alt='Foto van klacht'><br></b>";
 
-                // Hier maken we de pop up aan
+                // Zet pins op de kaart
                 L.marker([{{ $klacht['lat'] }}, {{ $klacht['long'] }}])
                     .addTo(map)
-                    .bindPopup(customPopup);
+                    .bindPopup(popup);
                 @endforeach
             });
         </script>
@@ -109,7 +109,5 @@
                 </tbody>
             </table>
         </div>
-
-
     </section>
 @endsection
