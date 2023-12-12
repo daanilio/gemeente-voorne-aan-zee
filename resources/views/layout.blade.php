@@ -41,7 +41,12 @@
             <ul class="flex flex-row md:flex-row md:space-x-8 md:text-lg">
                 @can('medewerker') <li><a href="{{ route('medewerkers') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Medewerker</a></li> @endcan
                 @guest <li><a href=" {{ route('login') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Inloggen</a></li> @endguest
-                @auth <li><a href="{{ route('logout') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Uitloggen</a></li> @endauth
+                @auth
+                    <form id="logout-form" method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <li><button type="submit" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Uitloggen</button></li>
+                    </form>
+                @endauth
             </ul>
         </div>
 
