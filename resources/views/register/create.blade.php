@@ -40,7 +40,7 @@
                         </label>
                         <input
                             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password" name="password" type="password" placeholder="Uw wachtwoord">
+                            id="password" name="password" type="password" placeholder="Uw wachtwoord (moet bestaan uit minimaal 7 tekens)">
                         @error('password')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                         @enderror
