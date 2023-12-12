@@ -30,8 +30,8 @@
     $alleKlachten = Klacht::all();
 
     ?>
-    <section class="grid grid-cols-3 gap-y-8 gap-x-8 flex-col">
-        <div class="col-span-3" id="map"></div>
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-8">
+        <div class="md:col-span-3" id="map"></div>
 
         {{--    Laad open street map in --}}
         <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -60,36 +60,40 @@
         </script>
 
         <div class="bg-white col-span-2 shadow-lg p-4">
-            <p class="text-2xl text-center">Alle klachten</p><br>
-            <table class="p-2 border border-collapse">
-                <thead>
-                <tr class="border p-2">
-                    <th class="border p-2">Klacht ID</th>
-                    <th class="border p-2">Naam melder</th>
-                    <th class="border p-2">Email melder</th>
-                    <th class="border p-2">Klacht</th>
-                    <th class="border p-2">Aangemaakt op</th>
-                    <th colspan="2" class="border p-2">Beheren</th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($alleKlachten as $klacht)
+            <p class="text-2xl text-center font-bold">Alle klachten</p><br>
+            <div class="overflow-x-auto">
+                <table class="w-full table-auto border-collapse">
+                    <thead>
                     <tr class="border p-2">
-                        <td class="border p-2">{{ $klacht->id }}</td>
-                        <td class="border p-2">{{ $klacht->naam }}</td>
-                        <td class="border p-2">{{ $klacht->email }}</td>
-                        <td class="border p-2">{{ $klacht->klacht }}</td>
-                        <td class="border p-2">{{ $klacht->created_at->format('d-m-Y') }}</td>
-                        <td class="border p-2 bg-green-500">Opgelost</td>
-                        <td class="border p-2 bg-red-500">Verwijderen</td>
+                        <th class="border p-2">Klacht ID</th>
+                        <th class="border p-2">Naam melder</th>
+                        <th class="border p-2">Email melder</th>
+                        <th class="border p-2">Klacht</th>
+                        <th class="border p-2">Aangemaakt op</th>
+                        <th class="border p-2">Opgelost</th>
+                        <th colspan="2" class="border p-2">Beheren</th>
                     </tr>
-                @endforeach
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    @foreach($alleKlachten as $klacht)
+                        <tr class="border p-2">
+                            <td class="border p-2">{{ $klacht->id }}</td>
+                            <td class="border p-2">{{ $klacht->naam }}</td>
+                            <td class="border p-2">{{ $klacht->email }}</td>
+                            <td class="border p-2">{{ $klacht->klacht }}</td>
+                            <td class="border p-2">{{ $klacht->created_at->format('d-m-Y') }}</td>
+                            <td class="border p-2">{{ $klacht->opgelost }}</td>
+                            <td class="border p-2 bg-green-500">Opgelost</td>
+                            <td class="border p-2 bg-red-500">Verwijderen</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="bg-white shadow-lg p-4">
-            <p class="text-2xl text-center">De vijf meest recente klachten</p><br>
+            <p class="text-2xl text-center font-bold">Laatste 5 klachten</p><br>
             <table class="p-2 border border-collapse">
                 <thead>
                 <tr class="border p-2">
@@ -109,5 +113,6 @@
                 </tbody>
             </table>
         </div>
+
     </section>
 @endsection

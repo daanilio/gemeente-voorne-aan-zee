@@ -8,7 +8,7 @@
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="flex flex-col space-y-8">
             <div class="bg-white shadow-lg p-4">
-                <p class="text-2xl md:text-3xl font-bold">Gemeente Voorne aan Zee</p>
+                <p class="text-2xl md:text-3xl font-bold">Gemeente VaZ klachten-applicatie</p>
                 <br>
                 <p class="text-base md:text-m">Beste burger, u bevindt zich op de klachten-applicatie van Gemeente
                     Voorne aan
