@@ -49,7 +49,7 @@
 
                 // De foreach zorgt ervoor dat elke klacht wordt weergegeven als een pin
                 @foreach($klachten as $klacht)
-                var popup = "<b>Klacht id: </b>{{ $klacht['id'] }}<br><b>Klacht: </b>{{ $klacht['klacht'] }}<br><b>Opgelost: </b>{{ $klacht['opgelost'] }}<br><b>Foto: <img src='{{ asset('storage/images/') . '/' . $klacht['foto'] }}' alt='Foto van klacht'><br></b>";
+                var popup = "<b>Klacht id: </b>{{ $klacht['id'] }}<br><b>Klacht: </b>{{ $klacht['klacht'] }}<br><b>Opgelost: </b>{{ $klacht['opgelost'] }}<br><b>Foto: <img style='max-width: 200px; display: block; margin: 0 auto;' src='{{ asset('storage/images/') . '/' . $klacht['foto'] }}' alt='Foto van klacht'><br></b>";
 
                 // Zet pins op de kaart
                 L.marker([{{ $klacht['lat'] }}, {{ $klacht['long'] }}])
