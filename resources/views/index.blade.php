@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'VaZ klachten-applicatie')
+@section('title', 'Gemeente Voorne aan Zee')
 
 @section('content')
     <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
