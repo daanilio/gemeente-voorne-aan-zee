@@ -31,3 +31,14 @@ Eenmaal geïnstalleerd, kun je het project uitvoeren door de volgende stappen te
 1. Voer `php artisan serve` uit om de ontwikkelingsserver te starten.
 2. Open je browser en ga naar `http://localhost:8000` (of de poort die wordt weergegeven in je terminal) om de applicatie te bekijken.
 
+## Functionaliteiten medewerker
+
+Om alle functionaliteiten te hebben moet u de functie medewerker hebben. Volg de volgende stappen om hiervoor te zorgen:
+
+1. Maak een account aan door te registreren.
+2. Navigeer naar uw database.
+3. Ga naar de tabel 'users'.
+4. Wijzig in de kolom 'is_medewerker' de '0' naar een '1'.
+5. Nu heeft u de functionaliteiten van een medewerker.
+
+---
