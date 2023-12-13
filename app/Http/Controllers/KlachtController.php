@@ -11,7 +11,7 @@ class KlachtController extends Controller
 {
     public function index()
     {
-        return view('index');
+        return view('klacht.index');
     }
 
     public function store(Request $request)
@@ -43,7 +43,7 @@ class KlachtController extends Controller
         }
 
 //         Redirect naar de welkomstpagina met een succesmelding
-        return view("klacht_ingediend", compact('data'));
+        return view("klacht.overzicht", compact('data'));
     }
 }
 
