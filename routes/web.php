@@ -18,7 +18,7 @@ Route::middleware('can:medewerker')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('indienen', [KlachtController::class, 'index'])->name('klacht.index');
+    Route::get('klacht', [KlachtController::class, 'index'])->name('klacht.index');
     Route::post('klacht', [KlachtController::class, 'store'])->name('klacht.store');
 });
 

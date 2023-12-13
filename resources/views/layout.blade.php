@@ -35,7 +35,7 @@
         <nav class="lg:flex md:pt-0 pt-2 md:flex-grow md:justify-center md:items-center md:pb-0 pb-3">
             <ul class="flex flex-row md:flex-row justify-center md:space-x-8 md:text-lg">
                 <li><a href="{{ route('index') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Hoofdpagina</a></li>
-                <li><a href="{{ route('klachtIndienen') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Klacht indienen</a></li>
+                <li><a href="{{ route('klacht.index') }}" class="p-2 transition duration-300 border-b-2 border-transparent hover:border-gray-500">Klacht indienen</a></li>
             </ul>
         </nav>
         <div class="flex justify-center text-center md:block">
